@@ -13,6 +13,15 @@ pip freeze > requirements.txt : To import all the requirements(like pandas, scik
 model.pkl will be moved from model folder to home folder
 
 git init
+
 git status #to track untracked file to be commit
+
 git add . #to add all the files from local to github cloud
+
 git commit -m "first commit"
+
+git branch -M main #Define main branch
+
+git remote add origin https://github.com/Vikash-Kumar-984/Machine-Learning-Model-API-Frontend-and-Backend.git #to add particular code to given origin
+
+git push -u origin main #just pushing the code
