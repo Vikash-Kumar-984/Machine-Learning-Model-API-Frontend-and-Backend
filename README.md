@@ -76,18 +76,18 @@ usable online.
 
 Local Computer -> Nginx (Web Server) -> Gunicorn (Application Server) -> Flask Framework
 
-Layer                  Tool / Technology                Purpose
-
-Application            Flask (Python)                   The core app (routes, logic, model)
-
-Server                 Gunicorn or uWSGI                Runs your Flask app in production
-
-Web Server             Nginx or Apache                  Handles incoming web traffic and sends it to your Flask app
-
-Cloud Platform         Render, Heroku, AWS, etc.        Hosts your app online
-
-Domain (optional)      GoDaddy, Namecheap, etc.         A human-readable URL (like myapp.com)
-
+| Layer                  | Tool / Technology                | Purpose                                                     | 
+|------------------------| ---------------------------------| ------------------------------------------------------------| 
+| Application            | Flask (Python)                   | The core app (routes, logic, model)                         | 
+|                        |                                  |                                                             | 
+| Server                 | Gunicorn or uWSGI                | Runs your Flask app in production                           | 
+|                        |                                  |                                                             | 
+| Web Server             | Nginx or Apache                  | Handles incoming web traffic and sends it to your Flask app | 
+|                        |                                  |                                                             | 
+| Cloud Platform         | Render, Heroku, AWS, etc.        | Hosts your app online                                       | 
+|                        |                                  |                                                             | 
+| Domain (optional)      | GoDaddy, Namecheap, etc.         | A human-readable URL (like myapp.com)                       | 
+|                        |                                  |                                                             | 
 
 # Application Server (Gunicorn) : 
 
