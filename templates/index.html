@@ -1,43 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Birth Weight Form</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birth Weight Predictor</title>
   <style>
-    /* Page background and general layout */
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #a2ded0, #e0f7fa);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      background: linear-gradient(to right, #e0f7fa, #b2dfdb);
+      color: #333;
     }
 
-    /* Center container */
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+      color: #004d40;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .intro {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .intro h2 {
+      color: #00796b;
+      font-size: 22px;
+    }
+
+    .intro p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
     form {
       background: white;
-      padding: 30px 40px;
+      padding: 30px;
       border-radius: 15px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      width: 300px;
-    }
-
-    h1 {
-      text-align: center;
-      color: #00695c;
-      position: absolute;
-      top: 40px;
-      font-size: 24px;
     }
 
     label {
       display: block;
       margin-top: 15px;
       font-weight: 600;
-      color: #333;
     }
 
     input[type="number"] {
@@ -46,7 +66,6 @@
       margin-top: 5px;
       border: 1px solid #ccc;
       border-radius: 8px;
-      transition: border-color 0.3s;
     }
 
     input[type="number"]:focus {
@@ -70,41 +89,61 @@
     button:hover {
       background-color: #004d40;
     }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      color: #555;
+    }
   </style>
 </head>
 
 <body>
-  <h2>Let's, Predict Birth Weight of the Child!</h2>
 
+  <header>
+    <h1>Welcome to Birth Weight Predictor</h1>
+    <p>Enter the medical information to predict the birth weight of a newborn.</p>
+  </header>
 
-  <form action="/predict" method="POST">
-    <label>Gestation</label>
-    <input name="gestation" type="number">
+  <div class="container">
+    <div class="intro">
+      <h2>About the Form</h2>
+      <p><strong>Gestation:</strong> Number of weeks the baby was in the womb. Normally between 37 to 42 weeks (provide input in days).</p>
+      <p><strong>Parity:</strong> Number of times the mother has previously given birth(0 = first pregnancy).</p>
+      <p><strong>Age:</strong> Age of the mother in years.</p>
+      <p><strong>Height:</strong> Height of the mother in inches .</p>
+      <p><strong>Weight:</strong> Pre-pregnancy weight of the mother in pounds.</p>
+      <p><strong>Smoke:</strong> Mother smoking status (0 = Non-smoker, 1 = Smoker).</p>
+      <p><strong>BWT:</strong> Birthweight in ounces (Result) .</p>
+    </div>
 
-    <label>Parity</label>
-    <input name="parity" type="number">
+    <form action="/predict" method="POST">
+      <label for="gestation">Gestation (weeks)</label>
+      <input name="gestation" type="number" required>
 
-    <label>Age</label>
-    <input name="age" type="number">
+      <label for="parity">Parity</label>
+      <input name="parity" type="number" required>
 
-    <label>Height</label>
-    <input name="height" type="number">
+      <label for="age">Age (years)</label>
+      <input name="age" type="number" required>
 
-    <label>Weight</label>
-    <input name="weight" type="number">
+      <label for="height">Height (cm or inches)</label>
+      <input name="height" type="number" required>
 
-    <label>Smoke</label>
-    <input name="smoke" type="number">
+      <label for="weight">Weight (kg or lbs)</label>
+      <input name="weight" type="number" required>
 
-    <button type="submit">Predict Birth Weight</button>
-    
-  <h3> Predicted Birth Weight : {{prediction}} </h3>
-    <footer style="text-align:center; padding: 10px; margin-top: 30px; color: #555;">
-  &copy; 2025 Vikash Kumar. All rights reserved.
-</footer>
-  </form>
-  <!-- <h3> Predicted Birth Weight : {{prediction}} </h3> -->
+      <label for="smoke">Smoke (0 = No, 1 = Yes)</label>
+      <input name="smoke" type="number" min="0" max="1" required>
+
+      <button type="submit">Predict Birth Weight</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Vikash Kumar. All rights reserved.
+  </footer>
+
 </body>
-
-
 </html>
