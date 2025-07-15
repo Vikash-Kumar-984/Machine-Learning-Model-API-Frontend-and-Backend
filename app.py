@@ -6,14 +6,23 @@ app = Flask(__name__)
 
 # Define the endpoint
 
-def get_cleaned_data():
-    gestation =  form_data['gestation']
-    parity =  form_data['parity']
-    age =  form_data['age']
-    height =  form_data['height']
-    weight =  form_data['weight']
-    smoke =  form_data['smoke']
-    
+def get_cleaned_data(form_data):
+    gestation =  float(form_data['gestation'])
+    parity =  int(form_data['parity'])
+    age =  float(form_data['age'])
+    height =  float(form_data['height'])
+    weight =  float(form_data['weight'])
+    smoke =  float(form_data['smoke'])
+
+    cleaned_data = {
+        "gestation":[gestation], #Making the values in 2-D as the trained model is trained as per 2-D
+        "parity": [parity],
+        "age": [age],
+        "height": [height],
+        "weight": [weight],
+        "smoke": [smoke]
+    }
+
     return cleaned_data
 
 @app.route('/',methods=['GET'])
@@ -43,7 +52,8 @@ def get_prediction():
     #Return response in json format
     response = {"Prediction ":prediction}
 
-    return jsonify(response)
+    # return jsonify(response)
+    return render_template("index.html",prediction=prediction)
 
 if __name__=='__main__':
     app.run(debug=True)

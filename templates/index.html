@@ -75,6 +75,8 @@
 
 <body>
   <h1>Predict Birth Weight of the Child</h1>
+
+  
   <form action="/predict" method="POST">
     <label>Gestation</label>
     <input name="gestation" type="number">
@@ -95,6 +97,9 @@
     <input name="smoke" type="number">
 
     <button type="submit">Predict Birth Weight</button>
+    
+  <h3> Predicted Birth Weight : {{prediction}} </h3>
   </form>
+  <!-- <h3> Predicted Birth Weight : {{prediction}} </h3> -->
 </body>
 </html>
