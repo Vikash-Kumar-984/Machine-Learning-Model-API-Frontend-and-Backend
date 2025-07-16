@@ -119,23 +119,23 @@
     </div>
 
     <form action="/predict" method="POST">
-      <label for="gestation">Gestation (in days)</label>
-      <input name="gestation" type="number" required>
+      <label for="gestation">Gestation </label>
+      <input name="gestation" type="number" required placeholder="Enter in Days">
 
       <label for="parity">Parity</label>
-      <input name="parity" type="number" required>
+      <input name="parity" type="number" required placeholder="Enter in Number">
 
-      <label for="age">Age (in years)</label>
-      <input name="age" type="number" required>
+      <label for="age">Age</label>
+      <input name="age" type="number" required placeholder="Enter in Years">
 
-      <label for="height">Height (in inches)</label>
-      <input name="height" type="number" required>
+      <label for="height">Height</label>
+      <input name="height" type="number" required placeholder="Enter in Inches">
 
-      <label for="weight">Weight (in pounds or lbs)</label>
-      <input name="weight" type="number" required>
+      <label for="weight">Weight</label>
+      <input name="weight" type="number" required placeholder="Enter in Pounds or lbs">
 
       <label for="smoke">Smoke (0 = No, 1 = Yes)</label>
-      <input name="smoke" type="number" min="0" max="1" required>
+      <input name="smoke" type="number" min="0" max="1" required placeholder="Enter in binary,i.e., 0 or 1">
 
       <button type="submit">Predict Birth Weight</button>
       
