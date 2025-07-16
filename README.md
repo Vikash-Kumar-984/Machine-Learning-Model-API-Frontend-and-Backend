@@ -12,6 +12,10 @@ pip freeze > requirements.txt : To import all the requirements(like pandas, scik
 
 model.pkl will be moved from model folder to home folder
 
+# Online Deployment
+
+https://birth-weight-prediction-3i6p.onrender.com/
+
 # Git Setup
 
 git init
