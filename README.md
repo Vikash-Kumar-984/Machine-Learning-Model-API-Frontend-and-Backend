@@ -44,7 +44,7 @@ git push -u origin main #just pushing the code
 
 # 1. What is deployment?
 
-- Deployment means making your web application (like your Flask app) live on the internet so that other people can use it — not just on your computer.
+- Deployment means making the web application (like your Flask app) live on the internet so that other people can use it — not just on your computer.
 For example, if you've built a machine learning model in Flask, deployment means putting it online so users can send requests and get predictions from anywhere in the world.
 
 - Analogy:
