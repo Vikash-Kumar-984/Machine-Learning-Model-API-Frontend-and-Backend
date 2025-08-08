@@ -1,6 +1,6 @@
 # Machine-Learning-Model-API-Frontend-and-Backend
 
-This repository contains the end to end project of frontend and backend for Machine Learning Model (APIs) on babies.csv dataset.
+This repository contains the end to end project of frontend and backend for Machine Learning Model (APIs) on babies.csv dataset to predict the weight of new born baby.
 
 1 ounce = 28 grams
 
